@@ -77,32 +77,42 @@ This workflow reduces repetitive coordination tasks by automating validation, pa
                        ↓
                   DASHBOARD  
 
-# project structure 
+## Project Structure
 
+```text
 HEALTHCARE-AI-CARE-COORDINATION/
 │
 ├── data/
 │   ├── raw/
-│   │   ├── patients.csv
-│   │   ├── providers.csv
-│   │   ├── conditions.csv
-│   │   └── medications.csv
+│   │   ├── patients
+│   │   ├── providers
+│   │   ├── conditions
+│   │   └── medications
+│   │
 │   └── operational/
-│       ├── appointments.csv
-│       ├── patients_new.csv
-│       └── ai_review_queue.csv
+│       ├── appointments
+│       ├── patients_new
+│       └── ai_review_queue
+│
 ├── automation/
-│   └── zapier_workflow_documentation.md
+│   ├── zapier_workflow_documentation.md
+│   └── n8n_workflow_documentation.md
+│
 ├── architecture/
 │   └── workflow_diagram.png
+│
 ├── screenshots/
 │   ├── form_screenshot.png
 │   ├── zapier_flow_screenshot.png
+│   ├── n8n_flow_screenshot.png
 │   └── sheet_output_screenshot.png
+│
 ├── docs/
 │   └── known_limitations.md
+│
 └── README.md
-                  
+```
+
 
 
 
