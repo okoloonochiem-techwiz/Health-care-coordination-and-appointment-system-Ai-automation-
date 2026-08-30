@@ -75,7 +75,40 @@ This workflow reduces repetitive coordination tasks by automating validation, pa
                        ↓
                  ERROR HANDLER
                        ↓
-                  DASHBOARD    
+                  DASHBOARD  
+
+# project structure 
+
+HEALTHCARE-AI-CARE-COORDINATION/
+│
+├── data/
+│   ├── raw/
+│   │   ├── patients.csv
+│   │   ├── providers.csv
+│   │   ├── conditions.csv
+│   │   └── medications.csv
+│   │
+│   └── operational/
+│       ├── appointments.csv
+│       ├── patients_new.csv
+│       └── ai_review_queue.csv
+│
+├── automation/
+│   └── zapier_workflow_documentation.md
+│
+├── architecture/
+│   └── workflow_diagram.png
+│
+├── screenshots/
+│   ├── form_screenshot.png
+│   ├── zapier_flow_screenshot.png
+│   └── sheet_output_screenshot.png
+│
+├── docs/
+│   └── known_limitations.md
+│
+└── README.md
+                  
 
 
 
