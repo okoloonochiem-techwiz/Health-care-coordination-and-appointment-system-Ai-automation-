@@ -1,9 +1,11 @@
-# AI-Powered Healthcare Appointment & Care Coordination System Flowchart Diagram
+# System Organogram — AI-Powered Healthcare Appointment & Care Coordination
 
-This flowchart diagram documents the workflow described in the project README. It distinguishes the new-patient path from the returning-patient path and keeps human review in the loop for complex or escalated requests.
+This system organogram presents the complete appointment and care-coordination workflow, including separate paths for new and returning patients.
 
 ```mermaid
 flowchart TB
+    TITLE["AI-POWERED HEALTHCARE APPOINTMENT & CARE COORDINATION<br/>SYSTEM ORGANOGRAM"]
+
     PATIENT[Patient]
     FORM[Google Form]
     SHEETS[(Google Sheets)]
@@ -11,6 +13,7 @@ flowchart TB
     RID[Generate request ID]
     VALIDATE[Validate appointment request]
 
+    TITLE --> PATIENT
     PATIENT --> FORM
     FORM --> SHEETS
     SHEETS --> ZAPIER
@@ -23,7 +26,7 @@ flowchart TB
     CHECK -->|No| UUID[Generate patient UUID]
 
     UUID --> NEWREC[Create new patient record]
-    NEWREC --> NEWQUEUE[Add to ai_review_queue\nNew patient — no history to evaluate]
+    NEWREC --> NEWQUEUE[Add to ai_review_queue<br/>New patient — no history to evaluate]
 
     LOOKUP --> CONTEXT[Build patient context]
     CONTEXT --> CONDITIONS[Conditions lookup]
