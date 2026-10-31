@@ -23,60 +23,6 @@ An automation system that streamlines patient appointment requests and care coor
 Manual appointment intake and care coordination can be repetitive, time-consuming, and prone to administrative errors.
 This workflow reduces repetitive coordination tasks by automating validation, patient matching, contextual lookup, classification, and routing while keeping a human in the loop for complex or escalated cases.
 
-# Workflow architecture\n\nSee the detailed Mermaid architecture diagram: [System organogram](diagrams/system-organogram.md).
-
-                    PATIENT
-                       ↓
-                 GOOGLE FORM
-                       ↓
-                GOOGLE SHEETS
-                       ↓
-                   ZAPIER
-                       ↓
-                REQUEST ID
-                       ↓
-                  VALIDATION
-                       ↓
-             ┌─────────┴─────────┐
-             ↓                   ↓
-        EXISTING              NEW PATIENT
-             ↓                   ↓
-       PATIENT LOOKUP        GENERATE UUID
-             ↓                   ↓
-             ↓              CREATE RECORD
-             ↓                   ↓
-             ↓              ai_review_queue
-             ↓              (new patient — no
-             ↓               history to evaluate)
-             ↓                   ↓
-             └─────────┬─────────┘
-                       ↓ (existing patients only,
-                       ↓  continues to AI Classifier)
-                PATIENT CONTEXT
-                  ├── CONDITIONS LOOKUP
-                  └── MEDICATIONS LOOKUP
-                       ↓
-                PROVIDER LOOKUP
-                       ↓
-                  AI CLASSIFIER
-                       ↓
-          ┌────────────┼────────────┐
-       ROUTINE       COMPLEX     ESCALATE
-          ↓            ↓            ↓
-     appointments   HUMAN         URGENT
-                    REVIEW        REVIEW
-                       ↓            ↓
-                  ai_review_queue (both)
-          └────────────┼────────────┘
-                       ↓
-                  NOTIFICATION
-                       ↓
-                  AUDIT LOG
-                       ↓
-                 ERROR HANDLER
-                       ↓
-                  DASHBOARD  
-
 ## Project Structure
 
 ```text
