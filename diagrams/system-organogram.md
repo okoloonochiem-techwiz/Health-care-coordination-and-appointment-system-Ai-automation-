@@ -1,6 +1,6 @@
-# AI-Powered Healthcare Appointment & Care Coordination system organogram
+# AI-Powered Healthcare Appointment & Care Coordination System Flowchart Diagram
 
-This diagram documents the workflow described in the project README. It distinguishes the new-patient path from the returning-patient path and keeps human review in the loop for complex or escalated requests.
+This flowchart diagram documents the workflow described in the project README. It distinguishes the new-patient path from the returning-patient path and keeps human review in the loop for complex or escalated requests.
 
 ```mermaid
 flowchart TB
