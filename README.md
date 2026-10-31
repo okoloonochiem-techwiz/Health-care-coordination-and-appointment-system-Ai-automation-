@@ -23,7 +23,7 @@ An automation system that streamlines patient appointment requests and care coor
 Manual appointment intake and care coordination can be repetitive, time-consuming, and prone to administrative errors.
 This workflow reduces repetitive coordination tasks by automating validation, patient matching, contextual lookup, classification, and routing while keeping a human in the loop for complex or escalated cases.
 
-# Workflow architecture 
+# Workflow architecture\n\nSee the detailed Mermaid architecture diagram: [System organogram](diagrams/system-organogram.md).
 
                     PATIENT
                        ↓
